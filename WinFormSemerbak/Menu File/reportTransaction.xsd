@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="reportTransaction" targetNamespace="http://tempuri.org/reportTransaction.xsd" xmlns:mstns="http://tempuri.org/reportTransaction.xsd" xmlns="http://tempuri.org/reportTransaction.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="reportTransaction" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="reportTransaction" msprop:Generator_UserDSName="reportTransaction">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReportTransaction" msprop:Generator_TableClassName="ReportTransactionDataTable" msprop:Generator_TableVarName="tableReportTransaction" msprop:Generator_RowChangedName="ReportTransactionRowChanged" msprop:Generator_TablePropName="ReportTransaction" msprop:Generator_RowDeletingName="ReportTransactionRowDeleting" msprop:Generator_RowChangingName="ReportTransactionRowChanging" msprop:Generator_RowEvHandlerName="ReportTransactionRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportTransactionRowDeleted" msprop:Generator_RowClassName="ReportTransactionRow" msprop:Generator_UserTableName="ReportTransaction" msprop:Generator_RowEvArgName="ReportTransactionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pembayaran" msprop:Generator_ColumnVarNameInTable="columnPembayaran" msprop:Generator_ColumnPropNameInRow="Pembayaran" msprop:Generator_ColumnPropNameInTable="PembayaranColumn" msprop:Generator_UserColumnName="Pembayaran" type="xs:int" minOccurs="0" />
+              <xs:element name="Tanggal" msprop:Generator_ColumnVarNameInTable="columnTanggal" msprop:Generator_ColumnPropNameInRow="Tanggal" msprop:Generator_ColumnPropNameInTable="TanggalColumn" msprop:Generator_UserColumnName="Tanggal" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

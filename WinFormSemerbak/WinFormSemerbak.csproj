@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7A860C3-8430-49CD-9472-B38055483919}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinFormSemerbak</RootNamespace>
+    <AssemblyName>WinFormSemerbak</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Env.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu File\MenuChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu File\MenuChangePassword.Designer.cs">
+      <DependentUpon>MenuChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu File\MenuManageBooking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu File\MenuManageBooking.Designer.cs">
+      <DependentUpon>MenuManageBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu File\reportTransaction.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportTransaction.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Price\MenuHolidayPrice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu Price\MenuHolidayPrice.Designer.cs">
+      <DependentUpon>MenuHolidayPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Price\MenuManageDailyPrice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu Price\MenuManageDailyPrice.Designer.cs">
+      <DependentUpon>MenuManageDailyPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Report\MenuReportTransaction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu Report\MenuReportTransaction.Designer.cs">
+      <DependentUpon>MenuReportTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Room\ManageRoomRepairment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu Room\ManageRoomRepairment.Designer.cs">
+      <DependentUpon>ManageRoomRepairment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Room\MenuManageRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu Room\MenuManageRoom.Designer.cs">
+      <DependentUpon>MenuManageRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Room\MenuManageRoomFacility.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu Room\MenuManageRoomFacility.Designer.cs">
+      <DependentUpon>MenuManageRoomFacility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Room\MenuManageRoomType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu Room\MenuManageRoomType.Designer.cs">
+      <DependentUpon>MenuManageRoomType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Transaction\AddNewGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Transaction\AddNewGuest.Designer.cs">
+      <DependentUpon>AddNewGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Transaction\ManuViewPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu Transaction\ManuViewPayment.Designer.cs">
+      <DependentUpon>ManuViewPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Transaction\MenuBookingRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu Transaction\MenuBookingRoom.Designer.cs">
+      <DependentUpon>MenuBookingRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Transaction\MenuInputPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu Transaction\MenuInputPayment.Designer.cs">
+      <DependentUpon>MenuInputPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu User\MenuManageEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu User\MenuManageEmployee.Designer.cs">
+      <DependentUpon>MenuManageEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu User\MenuManageGuest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu User\MenuManageGuest.Designer.cs">
+      <DependentUpon>MenuManageGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu File\MenuChangePassword.resx">
+      <DependentUpon>MenuChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu File\MenuManageBooking.resx">
+      <DependentUpon>MenuManageBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu File\ReportTransact.rdlc" />
+    <EmbeddedResource Include="Menu Price\MenuHolidayPrice.resx">
+      <DependentUpon>MenuHolidayPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Price\MenuManageDailyPrice.resx">
+      <DependentUpon>MenuManageDailyPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Report\MenuReportTransaction.resx">
+      <DependentUpon>MenuReportTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Room\ManageRoomRepairment.resx">
+      <DependentUpon>ManageRoomRepairment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Room\MenuManageRoom.resx">
+      <DependentUpon>MenuManageRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Room\MenuManageRoomFacility.resx">
+      <DependentUpon>MenuManageRoomFacility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Room\MenuManageRoomType.resx">
+      <DependentUpon>MenuManageRoomType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Transaction\AddNewGuest.resx">
+      <DependentUpon>AddNewGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Transaction\ManuViewPayment.resx">
+      <DependentUpon>ManuViewPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Transaction\MenuBookingRoom.resx">
+      <DependentUpon>MenuBookingRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Transaction\MenuInputPayment.resx">
+      <DependentUpon>MenuInputPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu User\MenuManageEmployee.resx">
+      <DependentUpon>MenuManageEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu User\MenuManageGuest.resx">
+      <DependentUpon>MenuManageGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Menu File\reportTransaction.xsc">
+      <DependentUpon>reportTransaction.xsd</DependentUpon>
+    </None>
+    <None Include="Menu File\reportTransaction.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>reportTransaction.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Menu File\reportTransaction.xss">
+      <DependentUpon>reportTransaction.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
